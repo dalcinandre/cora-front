@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pesagem" ng-controller="pesoCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ teste }}</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <form class="form jumbotron container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-gorup">
+                    <label class="label label-default" for="txtPeso">Peso</label>
+                    <input type="text" class="form-control" id="txtPeso" ng-model="peso">
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="form-gorup">
+                    <label class="label label-default" for="txtEmail">E-mail</label>
+                    <input type="text" class="form-control" id="txtEmail" ng-model="email">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <button ng-click="enviaEmail()" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+
+        <div class="text-info message" ng-if="retorno">
+            {{retorno}}
+        </div>
+    </form>
+
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="controller.js"></script>
+</body>
+
+</html>
